@@ -176,3 +176,14 @@ RETURN
 The dashboard gives management a single, unified view of delivery performance and order failures, replacing scattered data across multiple sources. Operations can now compare shippers on punctuality, cost and rating, the business can see where revenue is lost to cancellations, RTOs and returns, and leadership can choose shippers and focus on high-margin categories using data.
 
 </details>
+
+<details> <summary><h2>👤 About Me</h2></summary>
+
+**Momin Izhar Nisar**
+Data Analyst (Fresher) | Power BI · SQL · Python · Excel
+
+- 📞 Phone: 9834011201
+- 📧 Email: mominizhar45@gmail.com
+- 💻 GitHub: [github.com/Izmomin14](https://github.com/Izmomin14)
+
+</details>
