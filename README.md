@@ -1,7 +1,7 @@
 # Logistics-Delivery-Performance-Dashboard
 Logistics Delivery Performance & Order Failure Analysis Dashboard
 
-An interactive Power BI dashboard that tracks delivery performance across courier partners and the impact of cancellations, RTOs and returns on profitability. Data was cleaned and transformed using Power Query, and the dashboard covers shipper performance, order failures, returns and net margin across 2 pages (2023-2025).
+An interactive Power BI dashboard that tracks delivery performance across courier partners and the impact of cancellations, RTOs and returns on profitability. Data was cleaned using Python (Pandas and NumPy), and the dashboard built in Power BI covers shipper performance, order failures, returns and net margin across 2 pages (2023-2025).
 
 <details> <summary><h2>📌 Problem Statement</h2></summary>
 
@@ -43,13 +43,13 @@ Record counts: Customers 250 | Products 100 | Shippers 8 | Orders ~5,000 | Retur
 
 </details>
 
-<details> <summary><h2>🧹 Data Cleaning (Power Query)</h2></summary>
+<details> <summary><h2>🧹 Data Cleaning (Python - Pandas & NumPy)</h2></summary>
 
-- Removed duplicate and blank records across all tables
-- Standardized column names and data types (dates, currency, text)
-- Fixed inconsistent shipper names and casing (e.g. Blue Dart, DTDC, Xpressbees)
-- Handled blank Delivery_Date for undelivered orders so they are not counted as on time
-- Built relationships between tables (Customers → Logistics → Returns, Products, Suppliers, Date)
+- Loaded all tables into Pandas and removed duplicate and blank records (`drop_duplicates`, `dropna`)
+- Standardized column names and data types (dates with `pd.to_datetime`, currency, text)
+- Fixed inconsistent shipper names and casing using string methods (e.g. Blue Dart, DTDC, Xpressbees)
+- Handled missing values with Pandas and NumPy (`fillna`, `np.where`), keeping Delivery_Date blank for undelivered orders so they are not counted as on time
+- Exported the cleaned tables and built relationships in Power BI (Customers → Logistics → Returns, Products, Suppliers, Date)
 - Created DAX measures for KPIs (On-Time Delivery %, Late Delivery %, Return Rate %, Cancelled + RTO %, Net Margin)
 
 </details>
@@ -165,9 +165,8 @@ RETURN
 
 <details> <summary><h2>🛠️ Tools Used</h2></summary>
 
+- Python (Pandas, NumPy): data cleaning and transformation
 - Power BI: data modeling, DAX measures, dashboard design
-- Power Query: data cleaning and transformation
-- SQL / Python: data preparation
 
 </details>
 
@@ -180,7 +179,7 @@ The dashboard gives management a single, unified view of delivery performance an
 <details> <summary><h2>👤 About Me</h2></summary>
 
 **Momin Izhar Nisar**
-Data Analyst (Fresher) | Power BI · SQL · Python · Excel
+Data Analyst (Fresher) | Python · Power BI · SQL · Excel
 
 - 📞 Phone: 9834011201
 - 📧 Email: mominizhar45@gmail.com
